@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="impr-admin.css">
+     <script type="text/javascript" src="interact.js"></script>
+    <script type="text/javascript" src="impr-admin.js"></script>
+</head>
+<body>
+    <input type="button" value="Click" onclick="mostrarFormulario ();">
+    <div id="myForm" class="container">
+    </div>
+    <p id="onkey"></p>
+    <div class="container-text">
+        <div class="row">
+            <div class="col-25">
+                <label for="input_text1">Texto 1:</label>
+            </div>
+            <div class="col-75">
+                 <input type="text" id="input_text1" size="40" onkeyup="duplicarTexto('input_text1', 'div_text1');">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                 <label for="input_text2">Texto 2:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="input_text2" size="40" onkeyup="duplicarTexto('input_text2', 'div_text2');">
+            </div>
+        </div>
+    </div>
+    <div id="contenedor-params" class="contenedor-params">
+        <table>
+            <tr>
+                <td>Mostrar Logotipo del condominio:</td>
+                <td>
+                  <input type="checkbox" id="cbox_rlogo" class="aaa" checked onclick="hideShow('div_rlogo');">  
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Nombre del condominio:</td>
+                <td>
+                   <input type="checkbox" id="cbox_rname" class="aaa" checked onclick="hideShow('div_rname');"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Dirección del condominio:</td>
+                <td>
+                   <input type="checkbox" id="cbox_raddr" class="aaa" checked onclick="hideShow('div_raddr');"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Folio:</td>
+                <td>
+                  <input type="checkbox" id="cbox_folio"  checked onclick="hideShow('div_folio');">  
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Fecha:</td>
+                <td>
+                   <input type="checkbox" id="cbox_fecha"  checked onclick="hideShow('div_fecha');">
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Nombre del residente:</td>
+                <td>
+                   <input type="checkbox" id="cbox_mname"  checked onclick="hideShow('div_mname');">
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Segmento:</td>
+                <td>
+                  <input type="checkbox" id="cbox_segmt"  checked onclick="hideShow('div_segmt');"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Información extra:</td>
+                <td>
+                   <input type="checkbox" id="cbox_iextr"  checked onclick="hideShow('div_iextr');"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Descripción del pago:</td>
+                <td>
+                   <input type="checkbox" id="cbox_descr"  checked onclick="hideShow('div_descr');"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Monto:</td>
+                <td>
+                   <input type="checkbox" id="cbox_monto" checked onclick="hideShow('div_monto');">
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Cantidad con letra:</td>
+                <td>
+                  <input type="checkbox" id="cbox_letra" checked onclick="hideShow('div_letra');">  
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Firma de recibido:</td>
+                <td>
+                   <input type="checkbox" id="cbox_firma" checked onclick="hideShow('div_firma');"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Texto uno:</td>
+                <td>
+                   <input type="checkbox" id="cbox_text1" checked onclick="hideShow('div_text1');"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Texto dos:</td>
+                <td>
+                    <input type="checkbox" id="cbox_text2" checked onclick="hideShow('div_text2');">
+                </td>
+            </tr>
+            <tr>
+                <td>Imprimir Duplicado:</td>
+                <td>
+                    <input type="checkbox" id="cbox_dupli" checked > 
+                </td>
+            </tr>
+            <tr>
+                <td>Mostrar Lineas de Fondo:</td>
+                <td>
+                    <input type="checkbox" id="cbox_usarf" checked onclick="hideShow('div_usarf');"> 
+                </td>
+            </tr>
+            
+        </table>
+        
+        <input type="submit" value="Guardar" onclick=" saveParams ();">
+    </div>
+</body>
+</html>
